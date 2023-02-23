@@ -5,6 +5,8 @@
 body{
     background-color: #292524;
     color: #fafaf9;
+    font-family: "coiny",sans-serif;
+
 
 }
 
@@ -16,7 +18,6 @@ h1{
     text-align: center;
     font-size: 42px;
     text-transform: uppercase;
-    font-family: "coiny",sans-serif;
     /* color: #fafaf9; */
 }
 .fact{
