@@ -25,7 +25,8 @@ body{
 {
     background-color: #44403c;
     margin-bottom: 40px;
-    padding : 16px 40px
+    padding : 16px 40px;
+    text-align: center;
 
 }
 h1{
@@ -34,6 +35,7 @@ h1{
     font-size: 42px;
     text-transform: uppercase;
     /* color: #fafaf9; */
+    /* background-color: red; */
 }
 .fact{
     font-size: 20px;
@@ -53,6 +55,12 @@ h1{
     font-size:14px ;
     font-family: "coiny",sans-serif;
     /* color: #fafaf9; */
+    /* background-color: red; */
+    /* margin: 100px; */
+    /* padding : 100px; */
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 ul{
