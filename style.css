@@ -1,7 +1,11 @@
 *
 {
     /* color: #fafaf9; */
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
 body{
     background-color: #292524;
     color: #fafaf9;
@@ -9,13 +13,20 @@ body{
 
 
 }
+.header
+{
+    margin-bottom: 40px;
+}
 
 .fact-form
 {
     background-color: #44403c;
+    margin-bottom: 40px;
+
 }
 h1{
-    text-align: center;
+    /* text-align: center;  we commented it because its not the part of the design */
+
     font-size: 42px;
     text-transform: uppercase;
     /* color: #fafaf9; */
@@ -26,6 +37,7 @@ h1{
     font-family: "sono",sans-serif;
     /* color: #fafaf9; */
     background-color: #44403c;
+    margin-bottom: 16px;
 
 
 }
