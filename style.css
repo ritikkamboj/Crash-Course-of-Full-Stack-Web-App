@@ -16,6 +16,15 @@ body{
 
 
 }
+
+/* MAIN LAYOUT */
+.container
+{
+    max-width: 1000px;
+    background-color: skyblue;
+    margin: 0 auto;
+   
+}
 .header
 {
     margin-bottom: 40px;
@@ -32,7 +41,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:16px;`
+    gap:16px;
 
 }
 
@@ -44,6 +53,16 @@ body{
     text-align: center;
 
 }
+.main
+{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 40px;
+
+
+}
+
+/* ELEMENTS */
 h1{
     /* text-align: center;  we commented it because its not the part of the design */
 
