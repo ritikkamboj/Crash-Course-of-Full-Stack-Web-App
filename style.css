@@ -19,6 +19,21 @@ body{
 .header
 {
     margin-bottom: 40px;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    /* padding: 10px; */
+}
+.logo
+{
+    /* background-color: blue; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:16px;`
+
 }
 
 .fact-form
@@ -35,7 +50,8 @@ h1{
     font-size: 42px;
     text-transform: uppercase;
     /* color: #fafaf9; */
-    /* background-color: red; */
+    /* background-color: purple; */
+    /* line-height: 1; */
 }
 .fact{
     font-size: 20px;
