@@ -106,11 +106,23 @@ h1{
     padding-top: 3px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 100px;
 
 }
 .vote-buttons
 {
     margin-left: auto;
+}
+
+.vote-buttons button{
+    background-color: #78716c;
+    border: none;
+    font-size: 18px;
+    padding:6px 12px;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    
 }
 ul{
     list-style: none;
@@ -142,6 +154,8 @@ ul{
     border:none;
     color:inherit;
     transition: 0.3s;
+    cursor: pointer;
+    border-radius: 100px;
 }
 /* "btn-large " need to be define below so that so that font -size can override that .. */
 
@@ -169,3 +183,4 @@ ul{
     margin-bottom: 16px;
 
 }
+
