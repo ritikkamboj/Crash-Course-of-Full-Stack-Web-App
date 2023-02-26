@@ -112,6 +112,9 @@ h1{
 .vote-buttons
 {
     margin-left: auto;
+    display:flex;
+    gap: 8px;
+    flex-shrink: 0;     /* it applies on flex item (yeh flex -item hai for .fact class ) otherwise it also a flex container too */
 }
 
 .vote-buttons button{
@@ -122,8 +125,15 @@ h1{
     border-radius: 100px;
     color: inherit;
     font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
     
 }
+.vote-buttons button:hover{
+    background-color: #292524;
+}
+
 ul{
     list-style: none;
 }
