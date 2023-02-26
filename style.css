@@ -119,7 +119,7 @@ ul{
 .source:visited
 {
     color: #a8a29e;
-    text-decoration: none;
+    text-decoration: none;   /*isse underline hataya tha */
     margin-left: 12px;
     transition: 0.3s;
 }
@@ -132,3 +132,40 @@ ul{
 
 /* we can observe the DRY principle violation , to solve this we uses global selector (*) */
 
+.btn{
+    font-family: "Coiny",sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg,#3b82f6, #ef4444,#16a34a,#eab308);
+    border:none;
+    color:inherit;
+    transition: 0.3s;
+}
+/* "btn-large " need to be define below so that so that font -size can override that .. */
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+}
+.btn-large
+{
+    font-size: 20px;
+    padding:20px 32px 17px;
+
+}
+.btn-all-category
+{
+    margin-bottom: 16px;
+    width:100%;
+}
+.btn-category{
+    width:100%;
+    background-image: none;
+}
+
+.category
+{
+    margin-bottom: 16px;
+
+}
