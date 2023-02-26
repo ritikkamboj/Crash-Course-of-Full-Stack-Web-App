@@ -12,7 +12,7 @@ body{
     background-color: #292524;
     color: #fafaf9;
     font-family: "coiny",sans-serif;
-    padding : 40px ;
+    padding : 48px 64px ;
 
 
 }
@@ -20,8 +20,8 @@ body{
 /* MAIN LAYOUT */
 .container
 {
-    max-width: 1000px;
-    background-color: skyblue;
+    max-width: 1500px;
+    /* background-color: skyblue; */
     margin: 0 auto;
    
 }
@@ -43,6 +43,11 @@ body{
     justify-content: space-between;
     gap:16px;
 
+}
+.logo img{
+    /* height="68" width="68"  */
+    height:68px;
+    width: 68px;
 }
 
 .fact-form
