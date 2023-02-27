@@ -63,10 +63,7 @@ body{
 
 
 }
-.fact-form input :first-child{
-    flex-grow:1;
 
-}
 .main
 {
     display: grid;
@@ -204,6 +201,7 @@ ul{
 
 }
 .fact-form input, .fact-form select{
+    width:250px;
     background-color:#78716c ;
     border:none;
     border-radius: 100px;
@@ -216,9 +214,20 @@ ul{
 
     color: #a8a29e;
 }
+/* 
+.fact-form input :first-child{
+    flex-grow:1;
+    background-color: red;
+
+} */
+.first-child
+{
+    flex-grow: 1;
+}
 .fact-form span
 {
     font-size: 18px;
     font-weight: 600;
+    margin-right: 18px;
 }
 
