@@ -16,6 +16,10 @@ body{
 
 
 }
+.hidden
+{
+    display: none !important;
+}
 
 /* MAIN LAYOUT */
 .container
