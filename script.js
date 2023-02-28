@@ -17,38 +17,66 @@ btn.addEventListener("click",function(){
     
 })
 
-let votesInteresting=23;
-let votesMindBlowing=6;
 
-const text= " Capital of australia now is 'Canberra'";
+// const text= " Capital of australia now is 'Canberra'";
 
-votesInteresting=votesInteresting+1;
+// votesInteresting=votesInteresting+1;
 
-console.log("upvotes:",votesInteresting);
+// console.log("upvotes:",votesInteresting);
 
-let voteFalse= 4;
+// let voteFalse= 4;
 
-let isCorrect = voteFalse<votesInteresting;
+// let isCorrect = voteFalse<votesInteresting;
 
-console.log(isCorrect);
+// console.log(isCorrect);
 
-console.log(parseInt("30.56gfgdf"));
+// console.log(parseInt("30.56gfgdf"));
 
 // function to create a age of the fact 
 
 function calcAge(year)
 {
-    const currentYear=2022;
+    const currentYear=new Date().getFullYear();
 
     let age = currentYear-year;
+    
+    if(age>=0)
     return age;
+    else
+    return "Impossible year";
 }
 
 
-console.log(calcAge(2015));
+console.log(calcAge(2037));
+
+let votesInteresting=20;
+let votesMindBlowing=0;
+
+if(votesInteresting===votesMindBlowing)
+{
+    alert("value of both are equal ");
+}
+else if(votesInteresting> votesMindBlowing){
+    console.log("Interesting fact !! ");
+}
+else if(votesInteresting < votesMindBlowing)
+{
+    console.log("MindBlowing facts !!")
+}
+
+// falsy value : 0, "", null, undefined 
+
+// truthy value : all value other than falsy value are truthy value .
+
+if(votesMindBlowing)
+{
+    console.log("fact is mind blowing ");
+}
+else{
+    console.log("not so special fact ");
+}
 
 
-console.log(new Date().getFullYear());
 
 
 
