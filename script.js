@@ -1,22 +1,18 @@
 console.log("thankful , gratefull , blessfull ");
 
-const btn=document.querySelector(".btn-open");
+const btn = document.querySelector(".btn-open");
 
 const form = document.querySelector(".fact-form");
 
-btn.addEventListener("click",function(){
-    if(form.classList.contains("hidden"))
-    {
-        form.classList.remove("hidden");
-        btn.textContent="Close";
-    }
-    else{
-        form.classList.add("hidden");
-        btn.textContent="Share a Fact";
-    }
-    
-})
-
+btn.addEventListener("click", function () {
+  if (form.classList.contains("hidden")) {
+    form.classList.remove("hidden");
+    btn.textContent = "Close";
+  } else {
+    form.classList.add("hidden");
+    btn.textContent = "Share a Fact";
+  }
+});
 
 // const text= " Capital of australia now is 'Canberra'";
 
@@ -32,54 +28,47 @@ btn.addEventListener("click",function(){
 
 // console.log(parseInt("30.56gfgdf"));
 
-// function to create a age of the fact 
+// function to create a age of the fact
 
-function calcAge(year)
-{
-    const currentYear=new Date().getFullYear();
+function calcAge(year) {
+  const currentYear = new Date().getFullYear();
 
-    let age = currentYear-year;
-    
-    if(age>=0)
-    return age;
-    else
-    return "Impossible year";
+  let age = currentYear - year;
+
+  if (age >= 0) return age;
+  else return "Impossible year";
 }
-
 
 console.log(calcAge(2037));
 
-let votesInteresting=20;
-let votesMindBlowing=0;
+let votesInteresting = 20;
+let votesMindBlowing = 5;
 
-if(votesInteresting===votesMindBlowing)
-{
-    alert("value of both are equal ");
-}
-else if(votesInteresting> votesMindBlowing){
-    console.log("Interesting fact !! ");
-}
-else if(votesInteresting < votesMindBlowing)
-{
-    console.log("MindBlowing facts !!")
+if (votesInteresting === votesMindBlowing) {
+  alert("value of both are equal ");
+} else if (votesInteresting > votesMindBlowing) {
+  console.log("Interesting fact !! ");
+} else if (votesInteresting < votesMindBlowing) {
+  console.log("MindBlowing facts !!");
 }
 
-// falsy value : 0, "", null, undefined 
+// falsy value : 0, "", null, undefined
 
 // truthy value : all value other than falsy value are truthy value .
 
-if(votesMindBlowing)
-{
-    console.log("fact is mind blowing ");
-}
-else{
-    console.log("not so special fact ");
+if (votesMindBlowing) {
+  console.log("fact is mind blowing ");
+} else {
+  console.log("not so special fact ");
 }
 
+let votesFalse = 4;
 
+const votesTrue = votesInteresting + votesMindBlowing;
 
+let messege =
+  votesTrue > votesFalse
+    ? " Fact is true "
+    : " you need some more resources to verify the fact ";
 
-
-
-
-
+alert(messege);
