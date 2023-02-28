@@ -17,3 +17,41 @@ btn.addEventListener("click",function(){
     
 })
 
+let votesInteresting=23;
+let votesMindBlowing=6;
+
+const text= " Capital of australia now is 'Canberra'";
+
+votesInteresting=votesInteresting+1;
+
+console.log("upvotes:",votesInteresting);
+
+let voteFalse= 4;
+
+let isCorrect = voteFalse<votesInteresting;
+
+console.log(isCorrect);
+
+console.log(parseInt("30.56gfgdf"));
+
+// function to create a age of the fact 
+
+function calcAge(year)
+{
+    const currentYear=2022;
+
+    let age = currentYear-year;
+    return age;
+}
+
+
+console.log(calcAge(2015));
+
+
+console.log(new Date().getFullYear());
+
+
+
+
+
+
