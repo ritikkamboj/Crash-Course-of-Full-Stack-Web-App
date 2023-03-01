@@ -14,7 +14,6 @@ btn.addEventListener("click", function () {
   }
 });
 
-
 // votesInteresting=votesInteresting+1;
 
 // console.log("upvotes:",votesInteresting);
@@ -35,7 +34,8 @@ function calcAge(year) {
   let age = currentYear - year;
 
   if (age >= 0) return age;
-  else return `Impossible year.Year needs to be less than or equal to ${currentYear}`;
+  else
+    return `Impossible year.Year needs to be less than or equal to ${currentYear}`;
 }
 
 console.log(calcAge(2037));
@@ -72,13 +72,57 @@ let messege =
 
 // alert(messege);
 
-const text= " Capital of australia now is 'Canberra'";
+const text = " Capital of australia now is 'Canberra'";
 
-const text1= text.toUpperCase();
+const text1 = text.toUpperCase();
 
 console.log(text1);
-// String literral or string tempelate 
+// String literral or string tempelate
 
-const text3 = `The current fact is "${text1}".The age of the fact is ${calcAge(2050)}. The fact is probably ${votesTrue>votesFalse ? "correct" : "not true"}.`;
+const text3 = `The current fact is "${text1}".The age of the fact is ${calcAge(
+  2050
+)}. The fact is probably ${votesTrue > votesFalse ? "correct" : "not true"}.`;
 
 console.log(text3);
+
+// Arrow function
+
+const calcFactAge2 = (year) =>
+  new Date().getFullYear() - year > 0
+    ? new Date().getFullYear() - year
+    : `Impossible year.Year needs to be less than or equal to ${new Date().getFullYear()}`;
+// curly brackets laga ke undefined aa raha hai , why ?
+
+console.log(calcFactAge2(2015));
+
+// implementing code in arrow function , when the 'year'value is greater than current year
+console.log(calcFactAge2(2037));
+
+// Array
+
+const box = ["Lisbon is the capital of portugal", 2015, true, "jai maata di"];
+
+console.log(box);
+console.log(box[2]);
+console.log(box.length);
+console.log(box[box.length - 1]);
+
+// when we want to assign every element to a individual variable
+
+const [text2, createdIn, isCorrect] = box;
+
+console.log(isCorrect);
+
+const[text4]=box;
+
+console.log(text4);
+
+const newBox= [box,"something new to add"];
+console.log(newBox);
+console.log(newBox.length); // newBox length comes out to be 2 , but we know actually it is 5
+
+//spreading operator 
+const newBox1=[...box,"something new to add"];
+console.log(newBox1);
+console.log(newBox1.length);
+
