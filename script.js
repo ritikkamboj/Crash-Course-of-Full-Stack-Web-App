@@ -113,16 +113,49 @@ const [text2, createdIn, isCorrect] = box;
 
 console.log(isCorrect);
 
-const[text4]=box;
+const [text4] = box;
 
 console.log(text4);
 
-const newBox= [box,"something new to add"];
+const newBox = [box, "something new to add"];
 console.log(newBox);
 console.log(newBox.length); // newBox length comes out to be 2 , but we know actually it is 5
 
-//spreading operator 
-const newBox1=[...box,"something new to add"];
+//spread operator
+const newBox1 = [...box, "something new to add"];
 console.log(newBox1);
 console.log(newBox1.length);
 
+// Javascript Objects
+
+const factObj = {
+  text9: "Lisbon is the capital of portugal",
+  category: "Society",
+  createdIn: 2015,
+  isCorrect: "true",
+};
+
+console.log(factObj);
+
+console.log(factObj.createdIn);
+console.log(factObj["isCorrect"]);
+
+// if we want the value of properties to be assigned to a variable 👇
+
+const { category, text9 } = factObj;
+
+console.log(category, text9);
+
+const factObj2 = {
+  text10: "Captital of australia is Canberra ",
+
+  category: "Social",
+
+  summary: function () {
+    return `The fact that "${
+      this.text10
+    }" is a "${this.category.toUpperCase()}" fact`;
+  },
+};
+
+console.log(factObj2.summary());
