@@ -14,7 +14,6 @@ btn.addEventListener("click", function () {
   }
 });
 
-// const text= " Capital of australia now is 'Canberra'";
 
 // votesInteresting=votesInteresting+1;
 
@@ -36,7 +35,7 @@ function calcAge(year) {
   let age = currentYear - year;
 
   if (age >= 0) return age;
-  else return "Impossible year";
+  else return `Impossible year.Year needs to be less than or equal to ${currentYear}`;
 }
 
 console.log(calcAge(2037));
@@ -71,4 +70,15 @@ let messege =
     ? " Fact is true "
     : " you need some more resources to verify the fact ";
 
-alert(messege);
+// alert(messege);
+
+const text= " Capital of australia now is 'Canberra'";
+
+const text1= text.toUpperCase();
+
+console.log(text1);
+// String literral or string tempelate 
+
+const text3 = `The current fact is "${text1}".The age of the fact is ${calcAge(2050)}. The fact is probably ${votesTrue>votesFalse ? "correct" : "not true"}.`;
+
+console.log(text3);
