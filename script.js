@@ -1,10 +1,21 @@
+
+
 console.log("thankful , gratefull , blessfull ");
 
 const btn = document.querySelector(".btn-open");
 
+console.log(btn);
+console.dir(btn);
+
+const factsList = document.querySelector(".facts-list");
+console.dir(factsList);
+factsList.innerHTML="";
+
+
 const form = document.querySelector(".fact-form");
 
 btn.addEventListener("click", function () {
+
   if (form.classList.contains("hidden")) {
     form.classList.remove("hidden");
     btn.textContent = "Close";
@@ -13,6 +24,8 @@ btn.addEventListener("click", function () {
     btn.textContent = "Share a Fact";
   }
 });
+
+/*
 
 // votesInteresting=votesInteresting+1;
 
@@ -247,5 +260,10 @@ const initialFacts = [
 const arr6 = initialFacts.map((el)=>calcAge(el.createdIn));
 
 console.log(arr6);
+
+*/
+
+
+
 
 
