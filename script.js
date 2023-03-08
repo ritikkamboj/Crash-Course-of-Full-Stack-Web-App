@@ -32,7 +32,6 @@ const initialFacts = [
   },
 ];
 
-
 const CATEGORIES = [
   { name: "technology", color: "#3b82f6" },
   { name: "science", color: "#16a34a" },
@@ -60,11 +59,27 @@ factsList.innerHTML = "";
 // factsList.insertAdjacentHTML("afterbegin","<li> Aashish Kumar </li>");
 // factsList.insertAdjacentHTML("afterbegin","<li> Ritik kamboj </li>");
 
-createFactList(initialFacts);
-// createFactList([{text:"Ritik", category: "Kamboj"}])    // as we applied 'afterbegin' so this fact comes on top of initialFacts 
+// load data from Supabase
 
-function createFactList(dataArray){
+loadfacts();
 
+async function loadfacts() {
+  const res = await fetch("https://nmyqejypocmdokceenvd.supabase.co/rest/v1/facts", {
+    header: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+      authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+    },
+  });
+
+  console.log(res);
+}
+
+// createFactList(initialFacts);
+// createFactList([{text:"Ritik", category: "Kamboj"}])    // as we applied 'afterbegin' so this fact comes on top of initialFacts
+
+function createFactList(dataArray) {
   const htmlArr = dataArray.map(
     (fact) => `<li class="fact">
   <p >${fact.text}. 
@@ -75,15 +90,13 @@ function createFactList(dataArray){
       </li>`
   );
   console.log(htmlArr);
-  
-  const html = htmlArr.join("");
-  
-  console.log(html); // to make a big string from an array of three elements .
-  
-  factsList.insertAdjacentHTML("afterbegin", html);
-  
-}
 
+  const html = htmlArr.join("");
+
+  console.log(html); // to make a big string from an array of three elements .
+
+  factsList.insertAdjacentHTML("afterbegin", html);
+}
 
 const form = document.querySelector(".fact-form");
 
