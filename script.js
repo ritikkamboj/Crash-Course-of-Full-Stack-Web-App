@@ -32,6 +32,18 @@ const initialFacts = [
   },
 ];
 
+
+const CATEGORIES = [
+  { name: "technology", color: "#3b82f6" },
+  { name: "science", color: "#16a34a" },
+  { name: "finance", color: "#ef4444" },
+  { name: "society", color: "#eab308" },
+  { name: "entertainment", color: "#db2777" },
+  { name: "health", color: "#14b8a6" },
+  { name: "history", color: "#f97316" },
+  { name: "news", color: "#8b5cf6" },
+];
+
 console.log("thankful , gratefull , blessfull ");
 
 //Selecting DOM elements
@@ -48,22 +60,30 @@ factsList.innerHTML = "";
 // factsList.insertAdjacentHTML("afterbegin","<li> Aashish Kumar </li>");
 // factsList.insertAdjacentHTML("afterbegin","<li> Ritik kamboj </li>");
 
-const htmlArr = initialFacts.map(
-  (fact) => `<li class="fact">
-<p >${fact.text}. 
-    <a class="source" href=${fact.source} target="_blank">(Source)</a>
-</p>
-    <span class="tag" style="background-color:#3b82f6 ;">${fact.category}</span>
-    
-    </li>`
-);
-console.log(htmlArr);
+createFactList(initialFacts);
+// createFactList([{text:"Ritik", category: "Kamboj"}])    // as we applied 'afterbegin' so this fact comes on top of initialFacts 
 
-const html = htmlArr.join("");
+function createFactList(dataArray){
 
-console.log(html); // to make a big string from an array of three elements .
+  const htmlArr = dataArray.map(
+    (fact) => `<li class="fact">
+  <p >${fact.text}. 
+      <a class="source" href=${fact.source} target="_blank">(Source)</a>
+  </p>
+      <span class="tag" style="background-color:#3b82f6 ;">${fact.category}</span>
+      
+      </li>`
+  );
+  console.log(htmlArr);
+  
+  const html = htmlArr.join("");
+  
+  console.log(html); // to make a big string from an array of three elements .
+  
+  factsList.insertAdjacentHTML("afterbegin", html);
+  
+}
 
-factsList.insertAdjacentHTML("afterbegin", html);
 
 const form = document.querySelector(".fact-form");
 
