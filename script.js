@@ -64,17 +64,36 @@ factsList.innerHTML = "";
 loadfacts();
 
 async function loadfacts() {
-  const res = await fetch("https://nmyqejypocmdokceenvd.supabase.co/rest/v1/facts", {
-    header: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
-      authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
-    },
-  });
+  const res = await fetch(
+    "https://nmyqejypocmdokceenvd.supabase.co/rest/v1/facts",
+    {
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+        authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+      },
+    }
+  );
 
+  const data = await res.json();
+  console.log(data)
   console.log(res);
+
+  createFactList(data);
+
+
 }
+
+// const res = fetch("https://nmyqejypocmdokceenvd.supabase.co/rest/v1/facts",{
+//   header : {
+//     apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+//     authorisation : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teXFlanlwb2NtZG9rY2VlbnZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc0ODg5NjEsImV4cCI6MTk5MzA2NDk2MX0.mNhRBeHXPlv3TwbTUV4iemtW7pX7EMORJxugIywde4s",
+
+//   },
+// });
+
+// console.log(res);
 
 // createFactList(initialFacts);
 // createFactList([{text:"Ritik", category: "Kamboj"}])    // as we applied 'afterbegin' so this fact comes on top of initialFacts
