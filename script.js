@@ -43,6 +43,9 @@ const CATEGORIES = [
   { name: "news", color: "#8b5cf6" },
 ];
 
+// console.log((CATEGORIES.find((cat)=>cat.name==="society")).color);     awesome , amazing knowledge ❤❤❤
+
+
 console.log("thankful , gratefull , blessfull ");
 
 //Selecting DOM elements
@@ -80,10 +83,29 @@ async function loadfacts() {
   console.log(data)
   console.log(res);
 
+
+  // filtering the data where the category value is society 
+// const filterData =  data.filter((fact)=>fact.category==="Society");
+// console.log(filterData);
+
   createFactList(data);
 
 
 }
+
+//Filter function on Array 👍
+
+const arr15=[2,76,3,11,10,9].filter((el)=> el>10);
+console.log(arr15);
+
+console.log([2,76,3,11,10,9].filter((el)=>el>10));
+
+//find function on Array 
+
+
+console.log([2,76,3,11,10,9].find((el)=>el>10));
+
+
 
 // const res = fetch("https://nmyqejypocmdokceenvd.supabase.co/rest/v1/facts",{
 //   header : {
@@ -104,10 +126,13 @@ function createFactList(dataArray) {
   <p >${fact.text}. 
       <a class="source" href=${fact.source} target="_blank">(Source)</a>
   </p>
-      <span class="tag" style="background-color:#3b82f6 ;">${fact.category}</span>
+      <span class="tag" style="background-color:${(CATEGORIES.find((cat)=>cat.name===fact.category)).color} ">${fact.category}</span>
       
       </li>`
   );
+
+  console.log((CATEGORIES.find((cat)=>cat.name==="society")).color); 
+
   console.log(htmlArr);
 
   const html = htmlArr.join("");
