@@ -1,0 +1,272 @@
+*
+{
+    /* color: #fafaf9; */
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+
+}
+
+body{
+    background-color: #292524;
+    color: #fafaf9;
+    font-family: "coiny",sans-serif;
+    padding : 48px 64px ;
+
+
+}
+.hidden
+{
+    display: none !important;
+}
+
+/* MAIN LAYOUT */
+.container
+{
+    max-width: 1500px;
+    /* background-color: skyblue; */
+    margin: 0 auto;
+   
+}
+.header
+{
+    margin-bottom: 40px;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    /* padding: 10px; */
+}
+.logo
+{
+    /* background-color: blue; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:16px;
+
+}
+.logo img{
+    /* height="68" width="68"  */
+    height:68px;
+    width: 68px;
+}
+
+
+
+.main
+{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 40px;
+}
+@media (max-width:800px)
+{
+    /* grid-template-column 1fr; */
+    .main{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ELEMENTS */
+h1{
+    /* text-align: center;  we commented it because its not the part of the design */
+
+    font-size: 42px;
+    text-transform: uppercase;
+    /* color: #fafaf9; */
+    /* background-color: purple; */
+    /* line-height: 1; */
+}
+.fact{
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: "sono",sans-serif;
+    /* color: #fafaf9; */
+    background-color: #44403c;
+    margin-bottom: 16px;
+    padding: 16px 24px ;
+    /* border: 4px solid red ; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    letter-spacing: -1px;
+    border-radius: 16px;
+}
+
+@media (max-width:1300px){
+
+    .fact{
+        background-color: red;
+        flex-direction: column;
+        align-items: flex-end;
+        gap:12px;
+
+    }
+}
+.tag{
+
+    text-transform: uppercase;
+    font-size:14px ;
+    font-family: "coiny",sans-serif;
+    /* color: #fafaf9; */
+    /* background-color: red; */
+    /* margin: 100px; */
+    /* padding : 100px; */
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    /* margin-left:auto; */
+
+}
+.vote-buttons
+{
+    margin-left: auto;
+    display:flex;
+    gap: 8px;
+    flex-shrink: 0;     /* it applies on flex item (yeh flex -item hai for .fact class ) otherwise it also a flex container too */
+}
+
+.vote-buttons button{
+    background-color: #78716c;
+    border: none;
+    font-size: 18px;
+    padding:6px 12px;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.vote-buttons button:hover{
+    background-color: #292524;
+}
+
+ul{
+    list-style: none;
+}
+.source:link,
+.source:visited
+{
+    color: #a8a29e;
+    text-decoration: none;   /*isse underline hataya tha */
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.source:hover,
+.source:active
+{
+    color: #3b82f6;
+}
+
+/* we can observe the DRY principle violation , to solve this we uses global selector (*) */
+
+.btn{
+    font-family: "Coiny",sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg,#3b82f6, #ef4444,#16a34a,#eab308);
+    border:none;
+    color:inherit;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 100px;
+}
+/* "btn-large " need to be define below so that so that font -size can override that .. */
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+}
+.btn-large
+{
+    font-size: 20px;
+    padding:20px 32px 17px;
+
+}
+.btn-all-category
+{
+    /* color:inherit; */
+    margin-bottom: 16px;
+    width:100%;
+}
+.btn-category{
+    width:100%;
+    background-image: none;
+}
+
+.category
+{
+    margin-bottom: 16px;
+
+}
+
+/* FORM */
+.fact-form input, .fact-form select{
+    width:250px;
+    background-color:#78716c ;
+    border:none;
+    border-radius: 100px;
+    padding: 16px;
+    font-size: 18px;
+    color:inherit;
+    font-family: inherit;
+}
+.fact-form input::placeholder{
+
+    color: #a8a29e;
+}
+/* 
+.fact-form input :first-child{
+    flex-grow:1;
+    background-color: red;
+
+} */
+.first-child
+{
+    flex-grow: 1;
+}
+.fact-form span
+{
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 18px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding : 16px 32px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+}
+@media(max-width:1170px)
+{
+    body{
+        padding: 32px 48px;
+    }
+    .fact-form{
+        flex-direction:column;
+        align-items: stretch;
+
+    }
+    .fact-form input, .fact-form select
+    {
+        width: auto;
+    }
+}
+
+
+
