@@ -4,6 +4,7 @@ import "./style.css";
 
 function App() {
   return (
+    // header
     <>
     <header className="header">
       <div className="logo">
@@ -13,15 +14,30 @@ function App() {
       <button className="btn btn-large btn-open">Share a Fact</button>
     </header>
  
+<NewFactForm/>
 
-  <CategoryFilter/>
+<main class="main">
+<CategoryFilter/>
+<FactList/>
+</main>
   </>
    );
 }
 
 export default App;
 
+function NewFactForm(){
+
+  return(<form className="fact-form">Fact-Form</form>)
+}
+
 function CategoryFilter(){
 
-  return(<aside>Software developer Engineer @Google LLC</aside>);
+  return(<aside> Aashish Kumar Software developer Engineer @Google LLC</aside>);
+
+}
+
+function FactList(){
+
+  return(<section>Fact-List</section>)
 }
