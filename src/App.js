@@ -39,5 +39,9 @@ function CategoryFilter(){
 
 function FactList(){
 
-  return(<section>Fact-List</section>)
+  return(<>
+  <section>Fact-List</section>
+  <CategoryFilter/>
+  </>
+  )
 }
